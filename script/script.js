@@ -4,55 +4,57 @@
 
 
 // criança vale por 0,5
+
+
 let $adult = document.querySelector('#Adultos');
 
 let $child = document.getElementById(Crianças);
 
 let $duration = document.getElementById(Duração);
 
-function foodAdult(){
+function food(){
 
     if ($duration >= 6){
-        $quantityFood = $adult * 400;
+        $quantityFood = $adult * 400 + $child * (400 * 0.5);
         return($quantityFood)
     }
 
     else{
-        $quantityFood = $adult * 650;
+        $quantityFood = $adult * 650 + $child * (650 * 0.5);
         return($quantityFood)
     }
 
 }
 
-function drinksAdult(){
+function drinks(){
 
     if ($duration >= 6){
-        $quantityDrinkAdult = ($adult * 1000);
-        return($quantityDrinkAdult)
+        $quantityDrink = ($adult * 1000) + $child * (1000 * 0.5);
+        return($quantityDrink)
     }
 
     else{
-        $quantityDrinkAdult = $adult * 1500;
-        return($quantityDrinkAdult)
+        $quantityDrink = $adult * 1500 + $child * (1500 * 0.5);
+        return($quantityDrink)
     }
 
 }
 
-function drinksAdultCerveja(){
+function drinksCerveja(){
 
     if ($duration >= 6){
-        $quantityCervejaAdult = ($adult * 1200);
-        return($quantityCervejaAdult)
+        $quantityCerveja = $adult * 1200;
+        return($quantityCerveja)
     }
 
     else{
-        $quantityCervejaAdult = $adult * 2000;
-        return($quantityCervejaAdult)
+        $quantityCerveja = $adult * 2000;
+        return($quantityCerveja)
     }
 
 }
 
-function foodChild(){
+/*function foodChild(){
 
     if ($duration >= 6){
         $quantityFoodChild = $child * 200
@@ -81,6 +83,6 @@ function drinksChild(){
 }
 
 function textAnswerF(){
-    
-}
 
+}
+*/
