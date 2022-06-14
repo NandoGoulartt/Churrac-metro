@@ -54,6 +54,10 @@ function drinksCerveja(){
 
 }
 
+function textAnswerF(){
+    document.getElementById('textAnswer').innerHTML = "Quantidade de carne: " + $quantityFood + "Quantidade de bebidas: " + $quantityDrink + "Quantidade de cervja: " + $quantityCerveja;
+}
+
 /*function foodChild(){
 
     if ($duration >= 6){
