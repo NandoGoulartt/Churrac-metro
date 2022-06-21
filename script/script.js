@@ -5,57 +5,36 @@
 
 // criança vale por 0,5
 
+let inputAdultI = document.getElementById("Adultos");
+let inputChildI = document.getElementById("Crianças");
+let inputDurationI = document.getElementById("Duracao");
 
-let $adult = document.querySelector('#Adultos');
 
-let $child = document.getElementById(Crianças);
+function textAnswerF() {
+   
+    let inputAdult = inputAdultI.value;
+    let inputChild = inputChildI.value;
+    let inputDuration = inputDurationI.value;
+   
+    if (inputDuration <= 6) {
+        quantityFood = inputAdult * 400 + inputChild * (400 * 0.5);
+        quantityDrink = (inputAdult * 1000) + inputChild * (1000 * 0.5);
+        quantityCerveja = inputAdult * 1200;
 
-let $duration = document.getElementById(Duração);
 
-function food(){
-
-    if ($duration >= 6){
-        $quantityFood = $adult * 400 + $child * (400 * 0.5);
-        return($quantityFood)
     }
 
-    else{
-        $quantityFood = $adult * 650 + $child * (650 * 0.5);
-        return($quantityFood)
+    else {
+        quantityFood = inputAdult * 650 + inputChild * (650 * 0.5);
+        quantityDrink = inputAdult * 1500 + inputChild * (1500 * 0.5);
+        quantityCerveja = inputAdult * 2000;
+
     }
 
-}
 
-function drinks(){
-
-    if ($duration >= 6){
-        $quantityDrink = ($adult * 1000) + $child * (1000 * 0.5);
-        return($quantityDrink)
-    }
-
-    else{
-        $quantityDrink = $adult * 1500 + $child * (1500 * 0.5);
-        return($quantityDrink)
-    }
-
-}
-
-function drinksCerveja(){
-
-    if ($duration >= 6){
-        $quantityCerveja = $adult * 1200;
-        return($quantityCerveja)
-    }
-
-    else{
-        $quantityCerveja = $adult * 2000;
-        return($quantityCerveja)
-    }
-
-}
-
-function textAnswerF(){
-    document.getElementById('textAnswer').innerHTML = "Quantidade de carne: " + $quantityFood + "Quantidade de bebidas: " + $quantityDrink + "Quantidade de cervja: " + $quantityCerveja;
+    document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g";
+    document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml";
+    document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + "ml";
 }
 
 /*function foodChild(){
