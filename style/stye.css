@@ -25,6 +25,15 @@
 }
 
 .inputProject:focus{
-    overflow: none;
+    outline: none;
 
+}
+
+#containerRes{
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.textAnswerT{
+    margin: 5px;
 }

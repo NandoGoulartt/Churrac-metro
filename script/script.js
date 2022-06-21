@@ -30,9 +30,10 @@ function textAnswerF() {
         quantityCerveja = inputAdult * 2000;
 
     }
-
-
-    document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g";
-    document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml";
-    document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + "ml";
+    
+    document.getElementById('containerRes').style.background ="white";
+    document.getElementById('containerRes').style.border="1px solid #00000045";
+    document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g.";
+    document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
+    document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + "ml.";
 }
