@@ -36,36 +36,3 @@ function textAnswerF() {
     document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml";
     document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + "ml";
 }
-
-/*function foodChild(){
-
-    if ($duration >= 6){
-        $quantityFoodChild = $child * 200
-        return($quantityFoodChild)
-    }
-
-    else{
-        $quantityFoodChild = $child * 325
-        return($quantityFoodChild)
-    }
-
-}
-
-function drinksChild(){
-
-    if ($duration >= 6){
-        $quantityDrinkChild = $child * 500
-        return($quantityDrinkChild)
-    }
-
-    else{
-        $quantityDrinkChild = $child * 750
-        return($quantityDrinkChild)
-    }
-
-}
-
-function textAnswerF(){
-
-}
-*/
