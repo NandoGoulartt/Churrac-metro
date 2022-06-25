@@ -8,32 +8,42 @@
 let inputAdultI = document.getElementById("Adultos");
 let inputChildI = document.getElementById("Crianças");
 let inputDurationI = document.getElementById("Duracao");
+let inputAdultBeerI = document.getElementById("AdultosBeer");
 
 
 function textAnswerF() {
-   
+
     let inputAdult = inputAdultI.value;
     let inputChild = inputChildI.value;
     let inputDuration = inputDurationI.value;
-   
-    if (inputDuration <= 6) {
-        quantityFood = inputAdult * 400 + inputChild * (400 * 0.5);
-        quantityDrink = (inputAdult * 1000) + inputChild * (1000 * 0.5);
-        quantityCerveja = inputAdult * 1200;
+    let inputAdultBeer = inputAdultBeerI.value;
+    if (inputAdult > inputAdultBeer) {
+        if (inputDuration <= 6) {
+            quantityFood = inputAdult * 400 + inputChild * (400 * 0.5);
+            quantityDrink = (inputAdult * 1000) + inputChild * (1000 * 0.5);
+            quantityCerveja = inputAdultBeer * 1200;
 
 
+        }
+
+        else {
+            quantityFood = inputAdult * 650 + inputChild * (650 * 0.5);
+            quantityDrink = inputAdult * 1500 + inputChild * (1500 * 0.5);
+            quantityCerveja = Math.floor((inputAdultBeer * 2000) / 350);
+
+        }
+
+        document.getElementById('containerRes').style.background = "white";
+        document.getElementById('containerRes').style.border = "1px solid #00000045";
+        document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g.";
+        document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
+        document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + " Latas.";
     }
-
-    else {
-        quantityFood = inputAdult * 650 + inputChild * (650 * 0.5);
-        quantityDrink = inputAdult * 1500 + inputChild * (1500 * 0.5);
-        quantityCerveja = inputAdult * 2000;
-
+    else{
+        document.getElementById('textAnswerFood').innerHTML = "Quantidades de adultos que bebem superior a quantidade de adultos presentes no local. Por favor, confira as informações";
+        document.getElementById('textAnswerFood').style.color="red";
+        document.getElementById('textAnswerFood').style.background = "white";
+        document.getElementById('textAnswerFood').style.border = "1px solid #00000045";
+        document.getElementById('textAnswerFood').style.padding = "5px";
     }
-    
-    document.getElementById('containerRes').style.background ="white";
-    document.getElementById('containerRes').style.border="1px solid #00000045";
-    document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g.";
-    document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
-    document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + "ml.";
 }
