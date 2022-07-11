@@ -34,11 +34,13 @@ function textAnswerF() {
 
         }
 
+        
         document.getElementById('containerRes').style.background = "white";
         document.getElementById('containerRes').style.border = "1px solid #00000045";
         document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g.";
         document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
         document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + " Latas.";
+        document.getElementById('textAnswerError').style.display= "none";
         
     }
     else{
@@ -47,5 +49,6 @@ function textAnswerF() {
         document.getElementById('textAnswerError').style.background = "white";
         document.getElementById('textAnswerError').style.border = "1px solid #00000045";
         document.getElementById('textAnswerError').style.padding = "5px";
+        document.getElementById('textAnswerError').style.display= "";
     }
 }
