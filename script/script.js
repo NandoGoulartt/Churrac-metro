@@ -17,7 +17,8 @@ function textAnswerF() {
     let inputChild = inputChildI.value;
     let inputDuration = inputDurationI.value;
     let inputAdultBeer = inputAdultBeerI.value;
-    if (inputAdult > inputAdultBeer) {
+    
+    if (inputAdult >= inputAdultBeer) {
         if (inputDuration <= 6) {
             quantityFood = inputAdult * 400 + inputChild * (400 * 0.5);
             quantityDrink = (inputAdult * 1000) + inputChild * (1000 * 0.5);
@@ -38,12 +39,13 @@ function textAnswerF() {
         document.getElementById('textAnswerFood').innerHTML = "Quantidade de carne: " + quantityFood + "g.";
         document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
         document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + " Latas.";
+        
     }
     else{
-        document.getElementById('textAnswerFood').innerHTML = "Quantidades de adultos que bebem superior a quantidade de adultos presentes no local. Por favor, confira as informações";
-        document.getElementById('textAnswerFood').style.color="red";
-        document.getElementById('textAnswerFood').style.background = "white";
-        document.getElementById('textAnswerFood').style.border = "1px solid #00000045";
-        document.getElementById('textAnswerFood').style.padding = "5px";
+        document.getElementById('textAnswerError').innerHTML = "Quantidades de adultos que bebem superior a quantidade de adultos presentes no local. Por favor, confira as informações";
+        document.getElementById('textAnswerError').style.color="red";
+        document.getElementById('textAnswerError').style.background = "white";
+        document.getElementById('textAnswerError').style.border = "1px solid #00000045";
+        document.getElementById('textAnswerError').style.padding = "5px";
     }
 }
