@@ -41,6 +41,7 @@ function textAnswerF() {
         document.getElementById('textAnswerDrink').innerHTML = "Quantidade de bebidas: " + quantityDrink + "ml.";
         document.getElementById('textAnswerBeer').innerHTML = "Quantidade de cerveja: " + quantityCerveja + " Latas.";
         document.getElementById('textAnswerError').style.display= "none";
+        document.getElementById('textAnswertC').style.display= "";
         
     }
     else{
@@ -50,5 +51,6 @@ function textAnswerF() {
         document.getElementById('textAnswerError').style.border = "1px solid #00000045";
         document.getElementById('textAnswerError').style.padding = "5px";
         document.getElementById('textAnswerError').style.display= "";
+        document.getElementById('textAnswertC').style.display= "none";
     }
 }
