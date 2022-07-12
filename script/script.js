@@ -22,7 +22,7 @@ function textAnswerF() {
         if (inputDuration <= 6) {
             quantityFood = inputAdult * 400 + inputChild * (400 * 0.5);
             quantityDrink = (inputAdult * 1000) + inputChild * (1000 * 0.5);
-            quantityCerveja = inputAdultBeer * 1200;
+            quantityCerveja = Math.floor((inputAdultBeer * 1200) / 350);
 
 
         }
